@@ -15,7 +15,27 @@ This document records attempts to get the Xen Hypervisor running on a RaspberryP
   Could this be forked/modified for the RPi3?
 
 
-## Current Attempt (Work in Progress _FAILING_):
+## Attempted:
+
+### Use Cubieboard Image on Pi (_FAILING_)
+
+Follow the build instructions for [xen-arm-builder](https://github.com/mirage/xen-arm-builder).
+
+```
+# bulit in Ubuntu VM
+# copy out the img
+scp {{user}}@{{vm address}}:xen-arm-builder/cubietruck.img ~/
+# insert sd get disk number (n)
+diskutil list
+# unmount
+unmount /dev/disk{{n}}
+# copy to sd
+sudo dd bs=8m if=~/cubietruck.img of=/dev/disk{{n}}
+```
+
+Not surprisingly, the Pi doesn't boot.
+
+### Install via _apt-get_ in Ubuntu Mate (_FAILING_):
 
 [Ubuntu MATE for the Raspberry Pi 2 and Raspberry Pi 3](https://ubuntu-mate.org/raspberry-pi/)
 
@@ -49,6 +69,7 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 
 ## To try:
 
-* Try using/modifying the [xen-arm-builder](https://github.com/mirage/xen-arm-builder) image on RPi3
+* Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
+  and create custom Pi3 build.
 * [Ubuntu 14.04 LTS (Trusty Tahr) image for the Raspberry Pi 2](https://wiki.ubuntu.com/ARM/RaspberryPi)
 * [Ubuntu Server for ARM](http://www.ubuntu.com/download/server/arm)
