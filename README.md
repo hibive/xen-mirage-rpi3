@@ -72,8 +72,13 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 
 * Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
   and create custom Pi3 build.
+* Experiment with U-Boot and Linux kernels cross compiled for arm.
+  [RPi U-Boot](http://elinux.org/RPi_U-Boot)
 * Try the KVM+Solo5 combo
   [Run Mirage Unikernels on KVM/QEMU with Solo5](https://mirage.io/blog/introducing-solo5)
   [Enabling KVM virtualization for Raspberry Pi 2](http://blog.flexvdi.com/2015/03/17/enabling-kvm-virtualization-on-the-raspberry-pi-2/)
+  [KVM on the Raspberry Pi2](https://blog.night-shade.org.uk/2015/05/kvm-on-the-raspberry-pi2/)
 * [Ubuntu 14.04 LTS (Trusty Tahr) image for the Raspberry Pi 2](https://wiki.ubuntu.com/ARM/RaspberryPi)
-* [Ubuntu Server for ARM](http://www.ubuntu.com/download/server/arm)
+* Alpine Linux
+  [Alpine Linux on your Raspberry Pi](http://wiki.alpinelinux.org/wiki/Raspberry_Pi)
+  [Create a bootable SDHC from a Mac](http://wiki.alpinelinux.org/wiki/Create_a_bootable_SDHC_from_a_Mac)
