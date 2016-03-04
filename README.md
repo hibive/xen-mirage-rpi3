@@ -28,7 +28,7 @@ scp {{user}}@{{vm address}}:xen-arm-builder/cubietruck.img ~/
 # insert sd get disk number (n)
 diskutil list
 # unmount
-unmount /dev/disk{{n}}
+diskutil unmountDisk /dev/disk{{n}}
 # copy to sd
 sudo dd bs=8m if=~/cubietruck.img of=/dev/disk{{n}}
 ```
@@ -42,6 +42,7 @@ Not surprisingly, the Pi doesn't boot.
 Write image to an SD card in (OSX)
 ```sh
 diskutil list
+diskutil unmountDisk /dev/disk{{x}}
 sudo dd bs=8m if=~/mirage-downloads/ubuntu-mate-15.10.3-desktop-armhf-raspberry-pi-2.img of=/dev/disk{{x}}
 ```
 
@@ -71,5 +72,8 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 
 * Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
   and create custom Pi3 build.
+* Try the KVM+Solo5 combo
+  [Run Mirage Unikernels on KVM/QEMU with Solo5](https://mirage.io/blog/introducing-solo5)
+  [Enabling KVM virtualization for Raspberry Pi 2](http://blog.flexvdi.com/2015/03/17/enabling-kvm-virtualization-on-the-raspberry-pi-2/)
 * [Ubuntu 14.04 LTS (Trusty Tahr) image for the Raspberry Pi 2](https://wiki.ubuntu.com/ARM/RaspberryPi)
 * [Ubuntu Server for ARM](http://www.ubuntu.com/download/server/arm)
