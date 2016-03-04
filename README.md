@@ -70,6 +70,9 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 
 ## To try:
 
+* Solo5/Mirage on QEMU in emulation-only mode
+  * [QEMU](http://wiki.qemu.org/Main_Page)
+  * [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
 * Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
   and create custom Pi3 build.
 * Experiment with U-Boot and Linux kernels cross compiled for arm.
