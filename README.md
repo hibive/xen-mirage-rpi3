@@ -72,7 +72,12 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 
 * Solo5/Mirage on QEMU in emulation-only mode
   * [QEMU](http://wiki.qemu.org/Main_Page)
-  * [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
+  * QEMU can be installed on a Linux on RPi
+    [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
+  * This would no longer be a Xen based set-up.
+  * Qemu uses [QCOW images](https://people.gnome.org/~markmc/qcow-image-format.html)
+    Mirage can build them: [Ocaml support for Qcow2 images](https://github.com/mirage/ocaml-qcow)
+  * Solo5 creates a [_.iso_ which can be booted using qemu](http://linux-tips.org/t/booting-from-an-iso-image-using-qemu/136)
 * Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
   and create custom Pi3 build.
 * Experiment with U-Boot and Linux kernels cross compiled for arm.
