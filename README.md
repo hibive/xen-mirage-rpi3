@@ -76,7 +76,12 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
     [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
   * This would no longer be a Xen based set-up.
   * Qemu uses [QCOW images](https://people.gnome.org/~markmc/qcow-image-format.html)
-    Mirage can build them: [Ocaml support for Qcow2 images](https://github.com/mirage/ocaml-qcow)
+    Mirage can build them? [Ocaml support for Qcow2 images](https://github.com/mirage/ocaml-qcow)
+  * [Solo5: Building a Unikernel Base from Scratch](https://mirage.io/blog/introducing-solo5#Solo5BuildingaUnikernelBasefromScratch)
+    ```
+    sudo qemu-system-x86_64 -s -nographic -name foo -m 1024 -cdrom kernel.iso -net nic,model=virtio -net tap,ifname=veth0,script=kvm-br.bash -drive file=disk.img,if=virtio -boot d
+    ```
+    [From solo5 makefile](https://github.com/djwillia/solo5/blob/mirage/Makefile#L47)
   * Solo5 creates a [_.iso_ which can be booted using qemu](http://linux-tips.org/t/booting-from-an-iso-image-using-qemu/136)
 * Fork [xen-arm-builder](https://github.com/mirage/xen-arm-builder)
   and create custom Pi3 build.
