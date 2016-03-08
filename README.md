@@ -71,12 +71,11 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
 ## To try:
 
 * Solo5/Mirage on QEMU in emulation-only mode
+  * [Run Mirage Unikernels on KVM/QEMU with Solo5](https://mirage.io/blog/introducing-solo5#Solo5BuildingaUnikernelBasefromScratch)
   * [QEMU](http://wiki.qemu.org/Main_Page)
   * QEMU can be installed on a Linux on RPi
     [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
   * This would no longer be a Xen based set-up.
-  * Qemu uses [QCOW images](https://people.gnome.org/~markmc/qcow-image-format.html)
-    Mirage can build them? [Ocaml support for Qcow2 images](https://github.com/mirage/ocaml-qcow)
   * [Solo5: Building a Unikernel Base from Scratch](https://mirage.io/blog/introducing-solo5#Solo5BuildingaUnikernelBasefromScratch)
     ```
     sudo qemu-system-x86_64 -s -nographic -name foo -m 1024 -cdrom kernel.iso -net nic,model=virtio -net tap,ifname=veth0,script=kvm-br.bash -drive file=disk.img,if=virtio -boot d
