@@ -76,6 +76,7 @@ U-Boot seems to be an alternative and is used on the Cubieboard image.
   * QEMU can be installed on a Linux on RPi
     [QEMU User Emulation](https://wiki.debian.org/QemuUserEmulation)
   * This would no longer be a Xen based set-up.
+  * [The Solo5/Mirage Unikernel](https://github.com/djwillia/solo5/tree/mirage)
   * [Solo5: Building a Unikernel Base from Scratch](https://mirage.io/blog/introducing-solo5#Solo5BuildingaUnikernelBasefromScratch)
     ```
     sudo qemu-system-x86_64 -s -nographic -name foo -m 1024 -cdrom kernel.iso -net nic,model=virtio -net tap,ifname=veth0,script=kvm-br.bash -drive file=disk.img,if=virtio -boot d
